@@ -18,6 +18,8 @@
 		A31B61C827B5767700C95634 /* ioasysBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61C727B5767700C95634 /* ioasysBookUITests.swift */; };
 		A31B61CA27B5767700C95634 /* ioasysBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61C927B5767700C95634 /* ioasysBookUITestsLaunchTests.swift */; };
 		A31B61DB27B57EBD00C95634 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61DA27B57EBD00C95634 /* Constants.swift */; };
+		A31B61E227B588F800C95634 /* LoginComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61E127B588F800C95634 /* LoginComponentViewController.swift */; };
+		A31B61E427B5966C00C95634 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61E327B5966C00C95634 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A31B61C727B5767700C95634 /* ioasysBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ioasysBookUITests.swift; sourceTree = "<group>"; };
 		A31B61C927B5767700C95634 /* ioasysBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ioasysBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A31B61DA27B57EBD00C95634 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A31B61E127B588F800C95634 /* LoginComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponentViewController.swift; sourceTree = "<group>"; };
+		A31B61E327B5966C00C95634 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 				A31B61A927B5767300C95634 /* Main.storyboard */,
 				A31B61B127B5767600C95634 /* LaunchScreen.storyboard */,
 				A31B61AF27B5767600C95634 /* Assets.xcassets */,
+				A31B61E327B5966C00C95634 /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 		A31B61D827B5772F00C95634 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A31B61DC27B5879D00C95634 /* Components */,
 				A31B61A727B5767300C95634 /* LoginViewController.swift */,
 			);
 			path = Controller;
@@ -163,6 +169,14 @@
 				A31B61DA27B57EBD00C95634 /* Constants.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A31B61DC27B5879D00C95634 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A31B61E127B588F800C95634 /* LoginComponentViewController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +310,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31B61E427B5966C00C95634 /* CustomTextField.swift in Sources */,
+				A31B61E227B588F800C95634 /* LoginComponentViewController.swift in Sources */,
 				A31B61DB27B57EBD00C95634 /* Constants.swift in Sources */,
 				A31B61A827B5767300C95634 /* LoginViewController.swift in Sources */,
 				A31B61A427B5767300C95634 /* AppDelegate.swift in Sources */,

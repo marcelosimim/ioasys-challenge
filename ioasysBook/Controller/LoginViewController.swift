@@ -48,6 +48,8 @@ class LoginViewController: UIViewController {
          image.translatesAutoresizingMaskIntoConstraints = false
          return image
      }()
+    
+    lazy var loginComponent = LoginComponentViewController()
 
     //MARK: - Setting View
     
@@ -55,6 +57,10 @@ class LoginViewController: UIViewController {
         view.addSubview(backgroundImage)
         view.addSubview(vectorImage)
         view.addSubview(logoImage)
+        addChild(loginComponent)
+        view.addSubview(loginComponent.view)
+        loginComponent.didMove(toParent: self)
+        loginComponent.view.translatesAutoresizingMaskIntoConstraints = false
     }
     
     //MARK: - Constraints
@@ -74,6 +80,10 @@ class LoginViewController: UIViewController {
             logoImage.topAnchor.constraint(equalTo: view.topAnchor, constant: viewHeight!*0.239),
             logoImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 110),
             logoImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -110),
+            loginComponent.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            loginComponent.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loginComponent.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loginComponent.view.topAnchor.constraint(equalTo: view.topAnchor, constant: viewHeight!*0.562)
         ])
     }
 }
