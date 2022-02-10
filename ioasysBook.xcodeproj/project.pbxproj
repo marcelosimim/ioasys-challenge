@@ -20,6 +20,7 @@
 		A31B61DB27B57EBD00C95634 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61DA27B57EBD00C95634 /* Constants.swift */; };
 		A31B61E227B588F800C95634 /* LoginComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61E127B588F800C95634 /* LoginComponentViewController.swift */; };
 		A31B61E427B5966C00C95634 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61E327B5966C00C95634 /* CustomTextField.swift */; };
+		A31B61E627B5A03200C95634 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B61E527B5A03200C95634 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A31B61DA27B57EBD00C95634 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A31B61E127B588F800C95634 /* LoginComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponentViewController.swift; sourceTree = "<group>"; };
 		A31B61E327B5966C00C95634 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A31B61E527B5A03200C95634 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				A31B61DC27B5879D00C95634 /* Components */,
 				A31B61A727B5767300C95634 /* LoginViewController.swift */,
+				A31B61E527B5A03200C95634 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				A31B61E427B5966C00C95634 /* CustomTextField.swift in Sources */,
 				A31B61E227B588F800C95634 /* LoginComponentViewController.swift in Sources */,
 				A31B61DB27B57EBD00C95634 /* Constants.swift in Sources */,
+				A31B61E627B5A03200C95634 /* HomeViewController.swift in Sources */,
 				A31B61A827B5767300C95634 /* LoginViewController.swift in Sources */,
 				A31B61A427B5767300C95634 /* AppDelegate.swift in Sources */,
 				A31B61AE27B5767300C95634 /* ioasysBook.xcdatamodeld in Sources */,

@@ -67,6 +67,7 @@ class LoginComponentViewController: UIViewController {
         button.layer.cornerRadius = 8
         button.layer.backgroundColor = UIColor(red: 0.224, green: 0.082, blue: 0.294, alpha: 1).cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(navigateToHome), for: .touchDown)
         return button
     }()
     
@@ -111,5 +112,11 @@ class LoginComponentViewController: UIViewController {
         }else{
             showPasswordIcon.image = UIImage(systemName: "eye.fill")
         }
+    }
+    
+    //MARK: - Navigation
+    
+    @objc func navigateToHome(){
+        navigationController?.pushViewController(HomeViewController(), animated: true)
     }
 }
