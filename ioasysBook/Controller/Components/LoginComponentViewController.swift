@@ -32,6 +32,7 @@ class LoginComponentViewController: UIViewController {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.delegate = self
         return textField
     }()
     
@@ -58,6 +59,7 @@ class LoginComponentViewController: UIViewController {
         textField.rightView = showPasswordIcon
         textField.rightViewMode = .always
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.delegate = self
         return textField
     }()
     
@@ -118,5 +120,12 @@ class LoginComponentViewController: UIViewController {
     
     @objc func navigateToHome(){
         navigationController?.pushViewController(HomeViewController(), animated: true)
+    }
+}
+
+extension LoginComponentViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
