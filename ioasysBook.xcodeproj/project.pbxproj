@@ -101,12 +101,10 @@
 		A31B61A227B5767300C95634 /* ioasysBook */ = {
 			isa = PBXGroup;
 			children = (
-				A31B61A327B5767300C95634 /* AppDelegate.swift */,
-				A31B61A527B5767300C95634 /* SceneDelegate.swift */,
-				A31B61A727B5767300C95634 /* ViewController.swift */,
-				A31B61A927B5767300C95634 /* Main.storyboard */,
-				A31B61AF27B5767600C95634 /* Assets.xcassets */,
-				A31B61B127B5767600C95634 /* LaunchScreen.storyboard */,
+				A31B61D927B5773900C95634 /* Resources */,
+				A31B61D627B576CB00C95634 /* Model */,
+				A31B61D727B5772800C95634 /* View */,
+				A31B61D827B5772F00C95634 /* Controller */,
 				A31B61B427B5767600C95634 /* Info.plist */,
 				A31B61AC27B5767300C95634 /* ioasysBook.xcdatamodeld */,
 			);
@@ -128,6 +126,40 @@
 				A31B61C927B5767700C95634 /* ioasysBookUITestsLaunchTests.swift */,
 			);
 			path = ioasysBookUITests;
+			sourceTree = "<group>";
+		};
+		A31B61D627B576CB00C95634 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A31B61D727B5772800C95634 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A31B61A927B5767300C95634 /* Main.storyboard */,
+				A31B61B127B5767600C95634 /* LaunchScreen.storyboard */,
+				A31B61AF27B5767600C95634 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A31B61D827B5772F00C95634 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A31B61A727B5767300C95634 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A31B61D927B5773900C95634 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A31B61A327B5767300C95634 /* AppDelegate.swift */,
+				A31B61A527B5767300C95634 /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
