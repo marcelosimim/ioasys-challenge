@@ -123,6 +123,8 @@ class LoginComponentViewController: UIViewController {
     }
 }
 
+//MARK: - UITextField Delegate
+
 extension LoginComponentViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
