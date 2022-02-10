@@ -36,6 +36,15 @@ class LoginViewController: UIViewController {
         let image = UIImageView()
          image.image = UIImage(named: K.vectorImage)
          image.contentMode = .scaleAspectFit
+         image.layer.compositingFilter = "overlayBlendMode"
+         image.translatesAutoresizingMaskIntoConstraints = false
+         return image
+     }()
+    
+    lazy var logoImage: UIImageView = {
+        let image = UIImageView()
+         image.image = UIImage(named: K.logoImage)
+         image.contentMode = .scaleAspectFit
          image.translatesAutoresizingMaskIntoConstraints = false
          return image
      }()
@@ -45,6 +54,7 @@ class LoginViewController: UIViewController {
     private func addComponents(){
         view.addSubview(backgroundImage)
         view.addSubview(vectorImage)
+        view.addSubview(logoImage)
     }
     
     //MARK: - Constraints
@@ -58,7 +68,12 @@ class LoginViewController: UIViewController {
             vectorImage.heightAnchor.constraint(equalToConstant: viewHeight!*0.304),
             vectorImage.widthAnchor.constraint(equalToConstant: viewWidth!*0.664),
             vectorImage.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            vectorImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: viewWidth!*0.587),
+            vectorImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: viewWidth!*0.5),
+            logoImage.widthAnchor.constraint(equalToConstant: viewWidth!*0.307),
+            logoImage.heightAnchor.constraint(equalToConstant: viewHeight!*0.095),
+            logoImage.topAnchor.constraint(equalTo: view.topAnchor, constant: viewHeight!*0.239),
+            logoImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 110),
+            logoImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -110),
         ])
     }
 }
