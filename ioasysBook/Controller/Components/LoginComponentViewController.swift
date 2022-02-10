@@ -85,8 +85,6 @@ class LoginComponentViewController: UIViewController {
     
     private func settingConstraints(){
         NSLayoutConstraint.activate([
-            //view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            //view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             emailTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 36),
             emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
