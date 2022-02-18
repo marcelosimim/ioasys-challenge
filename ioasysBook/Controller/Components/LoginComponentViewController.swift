@@ -36,6 +36,15 @@ class LoginComponentViewController: UIViewController {
         return textField
     }()
     
+    lazy var emailErroLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Endereço de email inválido"
+        label.textColor = UIColor.white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "Roboto-Medium", size: 10)
+        return label
+    }()
+    
     lazy var showPasswordIcon: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(systemName: "eye.fill")
@@ -77,6 +86,7 @@ class LoginComponentViewController: UIViewController {
     
     private func addComponents(){
         view.addSubview(emailTextField)
+        view.addSubview(emailErroLabel)
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
     }
@@ -89,6 +99,9 @@ class LoginComponentViewController: UIViewController {
             emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
             emailTextField.heightAnchor.constraint(equalToConstant: 48),
+            emailErroLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor),
+            emailErroLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:45),
+            emailErroLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 19),
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 28),
             passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
@@ -101,7 +114,24 @@ class LoginComponentViewController: UIViewController {
         ])
     }
     
-    //MARK: - Password 
+    //MARK: - Email and Password methods
+    
+    func setValidEmail(){
+        emailTextField.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
+        emailErroLabel.textColor = UIColor.white
+    }
+    
+    func setInvalidEmail(){
+        emailTextField.layer.borderColor = UIColor.red.cgColor
+        emailErroLabel.textColor = UIColor.red
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
     
     @objc func showPasswordChange(){
         showPassword = !showPassword
@@ -117,7 +147,14 @@ class LoginComponentViewController: UIViewController {
     //MARK: - Navigation
     
     @objc func navigateToHome(){
-        navigationController?.pushViewController(HomeViewController(), animated: true)
+        let email = emailTextField.text ?? ""
+        
+        if isValidEmail(email){
+            setValidEmail()
+            navigationController?.pushViewController(HomeViewController(), animated: true)
+        }else{
+            setInvalidEmail()
+        }
     }
 }
 
